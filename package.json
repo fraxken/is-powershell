@@ -1,0 +1,42 @@
+{
+    "name": "is-powershell",
+    "version": "1.0.0",
+    "description": "Node.js - Detect if the terminal is powershell",
+    "main": "index.js",
+    "scripts": {
+        "prepublishOnly": "pkg-ok",
+        "doc": "jsdoc -c ./jsdoc.json -r -R ./README.md -P ./package.json --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fraxken/is-powershell.git"
+    },
+    "keywords": [
+        "is",
+        "powershell"
+    ],
+    "author": "GENTILHOMME Thomas <gentilhomme.thomas@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fraxken/is-powershell/issues"
+    },
+    "homepage": "https://github.com/fraxken/is-powershell#readme",
+    "dependencies": {
+        "find-process": "^1.2.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.2.1",
+        "@commitlint/config-conventional": "^7.1.2",
+        "@escommunity/minami": "^1.0.0",
+        "@slimio/eslint-config": "^2.0.3",
+        "@types/node": "^10.12.18",
+        "cross-env": "^5.2.0",
+        "eslint": "^5.10.0",
+        "husky": "^1.3.0",
+        "jsdoc": "^3.5.5",
+        "pkg-ok": "^2.3.1"
+    },
+    "engines": {
+        "node": ">=10"
+    }
+}
