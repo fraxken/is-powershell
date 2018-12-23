@@ -18,9 +18,11 @@ $ yarn add is-powershell
 ```js
 const isPowershell = require("is-powershell");
 
-isPowershell
-    .then((ret) => console.log(ret))
-    .catch(console.error);
+async function main() {
+    const ret = await isPowershell();
+    console.log(`is parent pid is powershell ? ${ret}`);
+}
+main().catch(console.error);
 ```
 
 ## Licence
