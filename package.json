@@ -1,6 +1,6 @@
 {
     "name": "is-powershell",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Node.js - Detect if the terminal is powershell",
     "main": "index.js",
     "os": ["win32"],
