@@ -3,7 +3,9 @@
     "version": "1.1.1",
     "description": "Node.js - Detect if the terminal is powershell",
     "main": "index.js",
-    "os": ["win32"],
+    "os": [
+        "win32"
+    ],
     "scripts": {
         "prepublishOnly": "pkg-ok",
         "doc": "jsdoc -c ./jsdoc.json -r -R ./README.md -P ./package.json --verbose"
@@ -24,7 +26,7 @@
     "homepage": "https://github.com/fraxken/is-powershell#readme",
     "dependencies": {},
     "devDependencies": {
-        "@commitlint/cli": "^7.2.1",
+        "@commitlint/cli": "^7.5.2",
         "@commitlint/config-conventional": "^7.1.2",
         "@escommunity/minami": "^1.0.0",
         "@slimio/eslint-config": "^2.0.3",
