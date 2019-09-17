@@ -1,12 +1,13 @@
+"use strict";
+
 // Require Node.js Dependencies
 const { spawn } = require("child_process");
 
 /**
  * @generator
- * @func split
+ * @function split
  * @param {!Buffer} buf buffer
- * @param {Number} [code] charCode
- * @returns {IterableIterator<Buffer>}
+ * @param {number} [code] charCode
  */
 function* split(buf, code = "\n".charCodeAt(0)) {
     let index;
@@ -19,9 +20,9 @@ function* split(buf, code = "\n".charCodeAt(0)) {
 }
 
 /**
- * @func isPowershell
- * @desc Known if the process parent id is powershell
- * @returns {Promise<Boolean>}
+ * @function isPowershell
+ * @description Known if the process parent id is powershell
+ * @returns {Promise<boolean>}
  */
 function isPowershell() {
     return new Promise((resolve, reject) => {
