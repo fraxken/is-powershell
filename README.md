@@ -2,7 +2,6 @@
 ![version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/fraxken/is-powershell/master/package.json&query=$.version&label=Version)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/fraxken/is-powershell/commit-activity)
 ![MIT](https://img.shields.io/github/license/mashape/apistatus.svg)
-![dep](https://img.shields.io/david/fraxken/is-powershell)
 ![size](https://img.shields.io/github/languages/code-size/fraxken/is-powershell)
 [![Known Vulnerabilities](https://snyk.io//test/github/fraxken/is-powershell/badge.svg?targetFile=package.json)](https://snyk.io//test/github/fraxken/is-powershell?targetFile=package.json)
 
