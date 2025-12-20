@@ -1,10 +1,6 @@
-"use strict";
-
 // Require Node.js Dependencies
-const { spawn } = require("child_process");
-
-// Require Third-party Dependencies
-const split = require("split2");
+import { spawn } from "node:child_process";
+import { createInterface } from "node:readline";
 
 // CONSTANTS
 const kProcessName = "powershell.exe";
@@ -14,17 +10,25 @@ const kProcessName = "powershell.exe";
  * @description Known if the process parent id is powershell
  * @returns {Promise<boolean>}
  */
-async function isPowershell() {
+export async function isPowershell() {
   if (process.platform !== "win32") {
-    throw new Error("Cannot execute the method, process.platform must be win32!");
+    return false;
   }
   const ppid = process.ppid.toString();
 
-  const cp = spawn("cmd", ["/c", "WMIC path win32_process get Name,Processid"]);
-  const rStream = cp.stdout.pipe(split());
+  const cp = spawn(
+    ["cmd", "/c", "WMIC path win32_process get Name,Processid"].join(" "),
+    {
+      shell: true
+    }
+  );
+  using rl = createInterface({ input: cp.stdout });
 
-  for await (const line of rStream) {
-    if (line.indexOf(ppid) !== -1 && line.indexOf(kProcessName) === 0) {
+  for await (const line of rl) {
+    if (
+      line.indexOf(ppid) !== -1 &&
+      line.indexOf(kProcessName) === 0
+    ) {
       return true;
     }
   }
@@ -32,4 +36,4 @@ async function isPowershell() {
   return false;
 }
 
-module.exports = isPowershell;
+export default isPowershell;
